@@ -1,0 +1,8 @@
+paper_title: Tubule-Specific Compensatory Responses to Cpt1a Deletion in Aged Mice
+doi: 10.34067/KID.0000000746
+data_source: "GSE277335"
+domain: snrna_seq
+ref_genome: mm10
+tools: [seurat, R]
+estimated_runtime_minutes: 45
+estimated_time_for_human: 50

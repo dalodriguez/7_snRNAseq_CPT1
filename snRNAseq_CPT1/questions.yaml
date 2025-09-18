@@ -1,0 +1,32 @@
+task: >
+  You have been given a snRNA-seq expression data from the article "Tubule-Specific Compensatory Responses to Cpt1a Deletion in Aged Mice". Using the data in the \data folder and provided workflows in the \workflow folder, answer the following questions. You must run the provided workflows. Do not create any synthetic data. Do not translate the provided workflow into a different language.
+
+questions:
+  - id: q1
+    stage: quality_control
+    text: How many cells remains after filtering nFeature_RNA >= 750 <= 5000, nCount_RNA <= 12500, percent.mito < 0.5,  percent.hemoglobin < 0.05 and percent.ribo < 5?
+    answer_type: integer_exact
+    tolerance = 5
+
+  - id: q2
+    stage: normalisation
+    text: What are the three most variable genes in the dataset?
+    answer_type: string_exact
+
+  - id: q3
+    stage: clustering
+    text: How many clusters are detected in the dataset?
+    answer_type: integer_exact
+    tolerance = 5
+
+  - id: q4
+    stage: quantification
+    text: How many cells express the gene "Slit2"?
+    answer_type: integer_exact
+    tolerance = 5
+
+  - id: q5
+    stage: differential_expression
+    text: How many features are co-expressed between the cells AAACCCAAGTTGCGCC-1 and AAACCCAGTCGCCACA-1
+    answer_type: integer_exact
+    tolerance = 5
